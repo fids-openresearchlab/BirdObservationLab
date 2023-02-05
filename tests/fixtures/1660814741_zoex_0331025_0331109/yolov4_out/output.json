@@ -1,0 +1,2448 @@
+{
+    "argv": "DarkHelp --json --autohide off --tiles on --tile-edge 0.4 --tile-rect 2.7 --duration off --nms 0.2 --threshold 0.05 /media/data/workspace/yolov5_playground/yolo_data/960_1088/bird_detector_final.weights /media/data/workspace/yolov5_playground/yolo_data/960_1088/bird_detector.cfg /media/data/workspace/yolov5_playground/yolo_data/960_1088/bird_detector_final.weights --outdir /media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out --keep 1660814741_zoex_0331025_0331109-331025.png 1660814741_zoex_0331025_0331109-331026.png 1660814741_zoex_0331025_0331109-331027.png 1660814741_zoex_0331025_0331109-331028.png 1660814741_zoex_0331025_0331109-331029.png 1660814741_zoex_0331025_0331109-331030.png 1660814741_zoex_0331025_0331109-331031.png 1660814741_zoex_0331025_0331109-331032.png 1660814741_zoex_0331025_0331109-331033.png 1660814741_zoex_0331025_0331109-331034.png 1660814741_zoex_0331025_0331109-331035.png 1660814741_zoex_0331025_0331109-331036.png 1660814741_zoex_0331025_0331109-331037.png ...",
+    "file": [
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331025.png",
+            "count": 0,
+            "duration": "204.911 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331025.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828508,
+                "nanoseconds": 1660828508132211694,
+                "text": "2022-08-18 15:15:08 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331026.png",
+            "count": 0,
+            "duration": "102.713 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331026.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828508,
+                "nanoseconds": 1660828508982928312,
+                "text": "2022-08-18 15:15:08 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331027.png",
+            "count": 0,
+            "duration": "104.456 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331027.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828509,
+                "nanoseconds": 1660828509832243796,
+                "text": "2022-08-18 15:15:09 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331028.png",
+            "count": 0,
+            "duration": "102.083 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331028.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828510,
+                "nanoseconds": 1660828510706315647,
+                "text": "2022-08-18 15:15:10 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331029.png",
+            "count": 0,
+            "duration": "103.318 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331029.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828511,
+                "nanoseconds": 1660828511584264572,
+                "text": "2022-08-18 15:15:11 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331030.png",
+            "count": 0,
+            "duration": "105.407 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331030.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828512,
+                "nanoseconds": 1660828512470271573,
+                "text": "2022-08-18 15:15:12 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331031.png",
+            "count": 0,
+            "duration": "103.067 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331031.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828513,
+                "nanoseconds": 1660828513438772652,
+                "text": "2022-08-18 15:15:13 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331032.png",
+            "count": 0,
+            "duration": "102.095 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331032.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828514,
+                "nanoseconds": 1660828514327910420,
+                "text": "2022-08-18 15:15:14 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331033.png",
+            "count": 0,
+            "duration": "101.759 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331033.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828515,
+                "nanoseconds": 1660828515219051499,
+                "text": "2022-08-18 15:15:15 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331034.png",
+            "count": 0,
+            "duration": "101.373 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331034.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828516,
+                "nanoseconds": 1660828516158382487,
+                "text": "2022-08-18 15:15:16 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331035.png",
+            "count": 0,
+            "duration": "103.406 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331035.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828517,
+                "nanoseconds": 1660828517104923604,
+                "text": "2022-08-18 15:15:17 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331036.png",
+            "count": 0,
+            "duration": "100.910 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331036.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828518,
+                "nanoseconds": 1660828518069417997,
+                "text": "2022-08-18 15:15:18 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331037.png",
+            "count": 0,
+            "duration": "99.425 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331037.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828519,
+                "nanoseconds": 1660828519032849315,
+                "text": "2022-08-18 15:15:19 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331038.png",
+            "count": 1,
+            "duration": "102.276 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331038.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "prediction": [
+                {
+                    "all_probabilities": [
+                        {
+                            "class": 0,
+                            "name": "#0",
+                            "probability": 0.9862709045410156
+                        }
+                    ],
+                    "best_class": 0,
+                    "best_probability": 0.9862709045410156,
+                    "name": "#0 99%",
+                    "original_point": {
+                        "x": 0.7026041746139526,
+                        "y": 0.9768518805503845
+                    },
+                    "original_size": {
+                        "height": 0.04537037014961243,
+                        "width": 0.0364583320915699
+                    },
+                    "prediction_index": 0,
+                    "rect": {
+                        "height": 98,
+                        "width": 140,
+                        "x": 2628,
+                        "y": 2061
+                    }
+                }
+            ],
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828520,
+                "nanoseconds": 1660828520003593198,
+                "text": "2022-08-18 15:15:20 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331039.png",
+            "count": 1,
+            "duration": "101.835 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331039.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "prediction": [
+                {
+                    "all_probabilities": [
+                        {
+                            "class": 0,
+                            "name": "#0",
+                            "probability": 0.8794170618057251
+                        }
+                    ],
+                    "best_class": 0,
+                    "best_probability": 0.8794170618057251,
+                    "name": "#0 88%",
+                    "original_point": {
+                        "x": 0.702343761920929,
+                        "y": 0.918055534362793
+                    },
+                    "original_size": {
+                        "height": 0.05370370298624039,
+                        "width": 0.04374999925494194
+                    },
+                    "prediction_index": 0,
+                    "rect": {
+                        "height": 116,
+                        "width": 168,
+                        "x": 2613,
+                        "y": 1925
+                    }
+                }
+            ],
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828520,
+                "nanoseconds": 1660828520972781338,
+                "text": "2022-08-18 15:15:20 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331040.png",
+            "count": 1,
+            "duration": "102.484 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331040.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "prediction": [
+                {
+                    "all_probabilities": [
+                        {
+                            "class": 0,
+                            "name": "#0",
+                            "probability": 0.18687626719474792
+                        }
+                    ],
+                    "best_class": 0,
+                    "best_probability": 0.18687626719474792,
+                    "name": "#0 19%",
+                    "original_point": {
+                        "x": 0.703125,
+                        "y": 0.8481481671333313
+                    },
+                    "original_size": {
+                        "height": 0.05740740895271301,
+                        "width": 0.05416666716337204
+                    },
+                    "prediction_index": 0,
+                    "rect": {
+                        "height": 124,
+                        "width": 208,
+                        "x": 2596,
+                        "y": 1770
+                    }
+                }
+            ],
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828521,
+                "nanoseconds": 1660828521976285404,
+                "text": "2022-08-18 15:15:21 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331041.png",
+            "count": 1,
+            "duration": "103.834 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331041.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "prediction": [
+                {
+                    "all_probabilities": [
+                        {
+                            "class": 0,
+                            "name": "#0",
+                            "probability": 0.5823976993560791
+                        }
+                    ],
+                    "best_class": 0,
+                    "best_probability": 0.5823976993560791,
+                    "name": "#0 58%",
+                    "original_point": {
+                        "x": 0.7037760615348816,
+                        "y": 0.7849537134170532
+                    },
+                    "original_size": {
+                        "height": 0.06898148357868195,
+                        "width": 0.08046875149011612
+                    },
+                    "prediction_index": 0,
+                    "rect": {
+                        "height": 149,
+                        "width": 309,
+                        "x": 2548,
+                        "y": 1621
+                    }
+                }
+            ],
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828522,
+                "nanoseconds": 1660828522972111732,
+                "text": "2022-08-18 15:15:22 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331042.png",
+            "count": 1,
+            "duration": "101.878 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331042.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "prediction": [
+                {
+                    "all_probabilities": [
+                        {
+                            "class": 0,
+                            "name": "#0",
+                            "probability": 0.5322372317314148
+                        }
+                    ],
+                    "best_class": 0,
+                    "best_probability": 0.5322372317314148,
+                    "name": "#0 53%",
+                    "original_point": {
+                        "x": 0.6962239742279053,
+                        "y": 0.7247685194015503
+                    },
+                    "original_size": {
+                        "height": 0.06620370596647263,
+                        "width": 0.0481770820915699
+                    },
+                    "prediction_index": 0,
+                    "rect": {
+                        "height": 143,
+                        "width": 185,
+                        "x": 2581,
+                        "y": 1494
+                    }
+                }
+            ],
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828523,
+                "nanoseconds": 1660828523967849341,
+                "text": "2022-08-18 15:15:23 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331043.png",
+            "count": 1,
+            "duration": "101.014 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331043.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "prediction": [
+                {
+                    "all_probabilities": [
+                        {
+                            "class": 0,
+                            "name": "#0",
+                            "probability": 0.9818119406700134
+                        }
+                    ],
+                    "best_class": 0,
+                    "best_probability": 0.9818119406700134,
+                    "name": "#0 98%",
+                    "original_point": {
+                        "x": 0.6975260376930237,
+                        "y": 0.6543981432914734
+                    },
+                    "original_size": {
+                        "height": 0.05601852014660835,
+                        "width": 0.03671874850988388
+                    },
+                    "prediction_index": 0,
+                    "rect": {
+                        "height": 121,
+                        "width": 141,
+                        "x": 2608,
+                        "y": 1353
+                    }
+                }
+            ],
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828524,
+                "nanoseconds": 1660828524982615929,
+                "text": "2022-08-18 15:15:24 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331044.png",
+            "count": 1,
+            "duration": "101.214 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331044.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "prediction": [
+                {
+                    "all_probabilities": [
+                        {
+                            "class": 0,
+                            "name": "#0",
+                            "probability": 0.9782325029373169
+                        }
+                    ],
+                    "best_class": 0,
+                    "best_probability": 0.9782325029373169,
+                    "name": "#0 98%",
+                    "original_point": {
+                        "x": 0.6981770992279053,
+                        "y": 0.5928241014480591
+                    },
+                    "original_size": {
+                        "height": 0.05972222238779068,
+                        "width": 0.02864583395421505
+                    },
+                    "prediction_index": 0,
+                    "rect": {
+                        "height": 129,
+                        "width": 110,
+                        "x": 2626,
+                        "y": 1216
+                    }
+                }
+            ],
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828525,
+                "nanoseconds": 1660828525987812374,
+                "text": "2022-08-18 15:15:25 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331045.png",
+            "count": 1,
+            "duration": "103.390 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331045.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "prediction": [
+                {
+                    "all_probabilities": [
+                        {
+                            "class": 0,
+                            "name": "#0",
+                            "probability": 0.9745371341705322
+                        }
+                    ],
+                    "best_class": 0,
+                    "best_probability": 0.9745371341705322,
+                    "name": "#0 97%",
+                    "original_point": {
+                        "x": 0.6975260376930237,
+                        "y": 0.5319444537162781
+                    },
+                    "original_size": {
+                        "height": 0.0555555559694767,
+                        "width": 0.03307291492819786
+                    },
+                    "prediction_index": 0,
+                    "rect": {
+                        "height": 120,
+                        "width": 127,
+                        "x": 2615,
+                        "y": 1089
+                    }
+                }
+            ],
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828526,
+                "nanoseconds": 1660828526994184352,
+                "text": "2022-08-18 15:15:26 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331046.png",
+            "count": 1,
+            "duration": "100.516 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331046.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "prediction": [
+                {
+                    "all_probabilities": [
+                        {
+                            "class": 0,
+                            "name": "#0",
+                            "probability": 0.9850001335144043
+                        }
+                    ],
+                    "best_class": 0,
+                    "best_probability": 0.9850001335144043,
+                    "name": "#0 99%",
+                    "original_point": {
+                        "x": 0.6975260376930237,
+                        "y": 0.4652777910232544
+                    },
+                    "original_size": {
+                        "height": 0.04814814776182175,
+                        "width": 0.0403645820915699
+                    },
+                    "prediction_index": 0,
+                    "rect": {
+                        "height": 104,
+                        "width": 155,
+                        "x": 2601,
+                        "y": 953
+                    }
+                }
+            ],
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828528,
+                "nanoseconds": 1660828528032176933,
+                "text": "2022-08-18 15:15:28 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331047.png",
+            "count": 1,
+            "duration": "102.252 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331047.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "prediction": [
+                {
+                    "all_probabilities": [
+                        {
+                            "class": 0,
+                            "name": "#0",
+                            "probability": 0.8396620154380798
+                        }
+                    ],
+                    "best_class": 0,
+                    "best_probability": 0.8396620154380798,
+                    "name": "#0 84%",
+                    "original_point": {
+                        "x": 0.6967447996139526,
+                        "y": 0.4025462865829468
+                    },
+                    "original_size": {
+                        "height": 0.05138888955116272,
+                        "width": 0.0455729179084301
+                    },
+                    "prediction_index": 0,
+                    "rect": {
+                        "height": 111,
+                        "width": 175,
+                        "x": 2588,
+                        "y": 814
+                    }
+                }
+            ],
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828529,
+                "nanoseconds": 1660828529054238708,
+                "text": "2022-08-18 15:15:29 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331048.png",
+            "count": 1,
+            "duration": "100.718 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331048.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "prediction": [
+                {
+                    "all_probabilities": [
+                        {
+                            "class": 0,
+                            "name": "#0",
+                            "probability": 0.5082396268844604
+                        }
+                    ],
+                    "best_class": 0,
+                    "best_probability": 0.5082396268844604,
+                    "name": "#0 51%",
+                    "original_point": {
+                        "x": 0.6967447996139526,
+                        "y": 0.3418981432914734
+                    },
+                    "original_size": {
+                        "height": 0.05324074253439903,
+                        "width": 0.05182291567325592
+                    },
+                    "prediction_index": 0,
+                    "rect": {
+                        "height": 115,
+                        "width": 199,
+                        "x": 2576,
+                        "y": 681
+                    }
+                }
+            ],
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828530,
+                "nanoseconds": 1660828530084359857,
+                "text": "2022-08-18 15:15:30 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331049.png",
+            "count": 1,
+            "duration": "100.509 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331049.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "prediction": [
+                {
+                    "all_probabilities": [
+                        {
+                            "class": 0,
+                            "name": "#0",
+                            "probability": 0.40575864911079407
+                        }
+                    ],
+                    "best_class": 0,
+                    "best_probability": 0.40575864911079407,
+                    "name": "#0 41%",
+                    "original_point": {
+                        "x": 0.6957031488418579,
+                        "y": 0.27546295523643494
+                    },
+                    "original_size": {
+                        "height": 0.05000000074505806,
+                        "width": 0.05494791641831398
+                    },
+                    "prediction_index": 0,
+                    "rect": {
+                        "height": 108,
+                        "width": 211,
+                        "x": 2566,
+                        "y": 541
+                    }
+                }
+            ],
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828531,
+                "nanoseconds": 1660828531139817282,
+                "text": "2022-08-18 15:15:31 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331050.png",
+            "count": 1,
+            "duration": "100.506 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331050.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "prediction": [
+                {
+                    "all_probabilities": [
+                        {
+                            "class": 0,
+                            "name": "#0",
+                            "probability": 0.9487186670303345
+                        }
+                    ],
+                    "best_class": 0,
+                    "best_probability": 0.9487186670303345,
+                    "name": "#0 95%",
+                    "original_point": {
+                        "x": 0.6949218511581421,
+                        "y": 0.213657408952713
+                    },
+                    "original_size": {
+                        "height": 0.05138888955116272,
+                        "width": 0.04609375074505806
+                    },
+                    "prediction_index": 0,
+                    "rect": {
+                        "height": 111,
+                        "width": 177,
+                        "x": 2580,
+                        "y": 406
+                    }
+                }
+            ],
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828531,
+                "nanoseconds": 1660828531989847005,
+                "text": "2022-08-18 15:15:31 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331051.png",
+            "count": 1,
+            "duration": "100.850 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331051.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "prediction": [
+                {
+                    "all_probabilities": [
+                        {
+                            "class": 0,
+                            "name": "#0",
+                            "probability": 0.9851186275482178
+                        }
+                    ],
+                    "best_class": 0,
+                    "best_probability": 0.9851186275482178,
+                    "name": "#0 99%",
+                    "original_point": {
+                        "x": 0.696093738079071,
+                        "y": 0.15509259700775146
+                    },
+                    "original_size": {
+                        "height": 0.05462963134050369,
+                        "width": 0.03125
+                    },
+                    "prediction_index": 0,
+                    "rect": {
+                        "height": 118,
+                        "width": 120,
+                        "x": 2613,
+                        "y": 276
+                    }
+                }
+            ],
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828532,
+                "nanoseconds": 1660828532842127650,
+                "text": "2022-08-18 15:15:32 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331052.png",
+            "count": 1,
+            "duration": "101.408 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331052.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "prediction": [
+                {
+                    "all_probabilities": [
+                        {
+                            "class": 0,
+                            "name": "#0",
+                            "probability": 0.9777958393096924
+                        }
+                    ],
+                    "best_class": 0,
+                    "best_probability": 0.9777958393096924,
+                    "name": "#0 98%",
+                    "original_point": {
+                        "x": 0.6966145634651184,
+                        "y": 0.09583333134651184
+                    },
+                    "original_size": {
+                        "height": 0.05740740895271301,
+                        "width": 0.03333333507180214
+                    },
+                    "prediction_index": 0,
+                    "rect": {
+                        "height": 124,
+                        "width": 128,
+                        "x": 2611,
+                        "y": 145
+                    }
+                }
+            ],
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828533,
+                "nanoseconds": 1660828533619038750,
+                "text": "2022-08-18 15:15:33 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331053.png",
+            "count": 1,
+            "duration": "103.539 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331053.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "prediction": [
+                {
+                    "all_probabilities": [
+                        {
+                            "class": 0,
+                            "name": "#0",
+                            "probability": 0.9718995690345764
+                        }
+                    ],
+                    "best_class": 0,
+                    "best_probability": 0.9718995690345764,
+                    "name": "#0 97%",
+                    "original_point": {
+                        "x": 0.6979166865348816,
+                        "y": 0.03726851940155029
+                    },
+                    "original_size": {
+                        "height": 0.05231481418013573,
+                        "width": 0.04114583507180214
+                    },
+                    "prediction_index": 0,
+                    "rect": {
+                        "height": 113,
+                        "width": 158,
+                        "x": 2601,
+                        "y": 24
+                    }
+                }
+            ],
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828534,
+                "nanoseconds": 1660828534430294449,
+                "text": "2022-08-18 15:15:34 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331054.png",
+            "count": 0,
+            "duration": "100.807 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331054.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828535,
+                "nanoseconds": 1660828535230513666,
+                "text": "2022-08-18 15:15:35 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331055.png",
+            "count": 0,
+            "duration": "101.553 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331055.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828536,
+                "nanoseconds": 1660828536048079049,
+                "text": "2022-08-18 15:15:36 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331056.png",
+            "count": 0,
+            "duration": "102.322 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331056.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828536,
+                "nanoseconds": 1660828536896290955,
+                "text": "2022-08-18 15:15:36 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331057.png",
+            "count": 0,
+            "duration": "100.976 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331057.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828537,
+                "nanoseconds": 1660828537743539884,
+                "text": "2022-08-18 15:15:37 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331058.png",
+            "count": 0,
+            "duration": "103.952 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331058.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828538,
+                "nanoseconds": 1660828538615667276,
+                "text": "2022-08-18 15:15:38 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331059.png",
+            "count": 0,
+            "duration": "102.496 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331059.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828539,
+                "nanoseconds": 1660828539502151768,
+                "text": "2022-08-18 15:15:39 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331060.png",
+            "count": 0,
+            "duration": "102.481 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331060.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828540,
+                "nanoseconds": 1660828540392552658,
+                "text": "2022-08-18 15:15:40 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331061.png",
+            "count": 0,
+            "duration": "100.474 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331061.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828541,
+                "nanoseconds": 1660828541305328365,
+                "text": "2022-08-18 15:15:41 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331062.png",
+            "count": 0,
+            "duration": "101.309 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331062.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828542,
+                "nanoseconds": 1660828542230824496,
+                "text": "2022-08-18 15:15:42 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331063.png",
+            "count": 0,
+            "duration": "102.026 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331063.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828543,
+                "nanoseconds": 1660828543203709337,
+                "text": "2022-08-18 15:15:43 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331064.png",
+            "count": 0,
+            "duration": "101.336 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331064.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828544,
+                "nanoseconds": 1660828544147848151,
+                "text": "2022-08-18 15:15:44 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331065.png",
+            "count": 0,
+            "duration": "101.754 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331065.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828545,
+                "nanoseconds": 1660828545097443578,
+                "text": "2022-08-18 15:15:45 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331066.png",
+            "count": 0,
+            "duration": "103.926 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331066.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828546,
+                "nanoseconds": 1660828546066642049,
+                "text": "2022-08-18 15:15:46 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331067.png",
+            "count": 0,
+            "duration": "101.747 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331067.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828547,
+                "nanoseconds": 1660828547021266161,
+                "text": "2022-08-18 15:15:47 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331068.png",
+            "count": 0,
+            "duration": "101.422 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331068.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828547,
+                "nanoseconds": 1660828547978831185,
+                "text": "2022-08-18 15:15:47 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331069.png",
+            "count": 0,
+            "duration": "107.278 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331069.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828548,
+                "nanoseconds": 1660828548955123260,
+                "text": "2022-08-18 15:15:48 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331070.png",
+            "count": 0,
+            "duration": "105.666 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331070.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828549,
+                "nanoseconds": 1660828549914708530,
+                "text": "2022-08-18 15:15:49 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331071.png",
+            "count": 0,
+            "duration": "101.767 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331071.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828550,
+                "nanoseconds": 1660828550860544970,
+                "text": "2022-08-18 15:15:50 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331072.png",
+            "count": 0,
+            "duration": "99.737 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331072.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828551,
+                "nanoseconds": 1660828551810829399,
+                "text": "2022-08-18 15:15:51 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331073.png",
+            "count": 0,
+            "duration": "101.323 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331073.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828552,
+                "nanoseconds": 1660828552763227658,
+                "text": "2022-08-18 15:15:52 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331074.png",
+            "count": 0,
+            "duration": "101.557 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331074.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828553,
+                "nanoseconds": 1660828553769621923,
+                "text": "2022-08-18 15:15:53 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331075.png",
+            "count": 0,
+            "duration": "101.067 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331075.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828554,
+                "nanoseconds": 1660828554735614521,
+                "text": "2022-08-18 15:15:54 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331076.png",
+            "count": 0,
+            "duration": "100.604 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331076.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828555,
+                "nanoseconds": 1660828555727464557,
+                "text": "2022-08-18 15:15:55 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331077.png",
+            "count": 0,
+            "duration": "101.503 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331077.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828556,
+                "nanoseconds": 1660828556709118511,
+                "text": "2022-08-18 15:15:56 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331078.png",
+            "count": 0,
+            "duration": "102.338 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331078.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828557,
+                "nanoseconds": 1660828557689983637,
+                "text": "2022-08-18 15:15:57 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331079.png",
+            "count": 0,
+            "duration": "100.755 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331079.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828558,
+                "nanoseconds": 1660828558695774075,
+                "text": "2022-08-18 15:15:58 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331080.png",
+            "count": 0,
+            "duration": "103.672 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331080.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828559,
+                "nanoseconds": 1660828559493530582,
+                "text": "2022-08-18 15:15:59 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331081.png",
+            "count": 0,
+            "duration": "102.117 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331081.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828560,
+                "nanoseconds": 1660828560306142032,
+                "text": "2022-08-18 15:16:00 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331082.png",
+            "count": 0,
+            "duration": "103.560 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331082.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828561,
+                "nanoseconds": 1660828561017234188,
+                "text": "2022-08-18 15:16:01 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331083.png",
+            "count": 0,
+            "duration": "102.615 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331083.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828561,
+                "nanoseconds": 1660828561772717262,
+                "text": "2022-08-18 15:16:01 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331084.png",
+            "count": 0,
+            "duration": "101.217 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331084.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828562,
+                "nanoseconds": 1660828562528745019,
+                "text": "2022-08-18 15:16:02 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331085.png",
+            "count": 0,
+            "duration": "101.653 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331085.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828563,
+                "nanoseconds": 1660828563283305019,
+                "text": "2022-08-18 15:16:03 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331086.png",
+            "count": 0,
+            "duration": "101.184 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331086.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828564,
+                "nanoseconds": 1660828564089319693,
+                "text": "2022-08-18 15:16:04 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331087.png",
+            "count": 0,
+            "duration": "103.732 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331087.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828564,
+                "nanoseconds": 1660828564883841378,
+                "text": "2022-08-18 15:16:04 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331088.png",
+            "count": 0,
+            "duration": "102.925 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331088.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828565,
+                "nanoseconds": 1660828565696188686,
+                "text": "2022-08-18 15:16:05 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331089.png",
+            "count": 0,
+            "duration": "102.069 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331089.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828566,
+                "nanoseconds": 1660828566526741555,
+                "text": "2022-08-18 15:16:06 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331090.png",
+            "count": 0,
+            "duration": "102.189 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331090.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828567,
+                "nanoseconds": 1660828567354313028,
+                "text": "2022-08-18 15:16:07 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331091.png",
+            "count": 0,
+            "duration": "101.844 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331091.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828568,
+                "nanoseconds": 1660828568221091457,
+                "text": "2022-08-18 15:16:08 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331092.png",
+            "count": 0,
+            "duration": "100.191 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331092.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828569,
+                "nanoseconds": 1660828569080789584,
+                "text": "2022-08-18 15:16:09 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331093.png",
+            "count": 0,
+            "duration": "102.355 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331093.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828569,
+                "nanoseconds": 1660828569949086728,
+                "text": "2022-08-18 15:16:09 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331094.png",
+            "count": 0,
+            "duration": "108.483 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331094.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828570,
+                "nanoseconds": 1660828570839293552,
+                "text": "2022-08-18 15:16:10 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331095.png",
+            "count": 1,
+            "duration": "93.718 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331095.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "prediction": [
+                {
+                    "all_probabilities": [
+                        {
+                            "class": 0,
+                            "name": "#0",
+                            "probability": 0.07900967448949814
+                        }
+                    ],
+                    "best_class": 0,
+                    "best_probability": 0.07900967448949814,
+                    "name": "#0 8%",
+                    "original_point": {
+                        "x": 0.0007812500116415322,
+                        "y": 0.9377315044403076
+                    },
+                    "original_size": {
+                        "height": 0.015277777798473835,
+                        "width": 0.0015625000232830644
+                    },
+                    "prediction_index": 0,
+                    "rect": {
+                        "height": 33,
+                        "width": 6,
+                        "x": 0,
+                        "y": 2009
+                    }
+                }
+            ],
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828571,
+                "nanoseconds": 1660828571725677877,
+                "text": "2022-08-18 15:16:11 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331096.png",
+            "count": 0,
+            "duration": "96.940 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331096.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828572,
+                "nanoseconds": 1660828572611220472,
+                "text": "2022-08-18 15:16:12 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331097.png",
+            "count": 1,
+            "duration": "97.298 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331097.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "prediction": [
+                {
+                    "all_probabilities": [
+                        {
+                            "class": 0,
+                            "name": "#0",
+                            "probability": 0.07757284492254257
+                        }
+                    ],
+                    "best_class": 0,
+                    "best_probability": 0.07757284492254257,
+                    "name": "#0 8%",
+                    "original_point": {
+                        "x": 0.0007812500116415322,
+                        "y": 0.9375
+                    },
+                    "original_size": {
+                        "height": 0.014814814552664757,
+                        "width": 0.0015625000232830644
+                    },
+                    "prediction_index": 0,
+                    "rect": {
+                        "height": 32,
+                        "width": 6,
+                        "x": 0,
+                        "y": 2009
+                    }
+                }
+            ],
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828573,
+                "nanoseconds": 1660828573515023210,
+                "text": "2022-08-18 15:16:13 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331098.png",
+            "count": 0,
+            "duration": "95.088 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331098.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828574,
+                "nanoseconds": 1660828574407223300,
+                "text": "2022-08-18 15:16:14 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331099.png",
+            "count": 0,
+            "duration": "96.498 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331099.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828575,
+                "nanoseconds": 1660828575305586960,
+                "text": "2022-08-18 15:16:15 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331100.png",
+            "count": 0,
+            "duration": "98.151 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331100.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828576,
+                "nanoseconds": 1660828576208464487,
+                "text": "2022-08-18 15:16:16 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331101.png",
+            "count": 0,
+            "duration": "102.925 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331101.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828577,
+                "nanoseconds": 1660828577117280139,
+                "text": "2022-08-18 15:16:17 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331102.png",
+            "count": 0,
+            "duration": "104.444 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331102.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828578,
+                "nanoseconds": 1660828578024818010,
+                "text": "2022-08-18 15:16:18 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331103.png",
+            "count": 1,
+            "duration": "98.602 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331103.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "prediction": [
+                {
+                    "all_probabilities": [
+                        {
+                            "class": 0,
+                            "name": "#0",
+                            "probability": 0.08589179813861847
+                        }
+                    ],
+                    "best_class": 0,
+                    "best_probability": 0.08589179813861847,
+                    "name": "#0 9%",
+                    "original_point": {
+                        "x": 0.0007812500116415322,
+                        "y": 0.9375
+                    },
+                    "original_size": {
+                        "height": 0.013888888992369175,
+                        "width": 0.0015625000232830644
+                    },
+                    "prediction_index": 0,
+                    "rect": {
+                        "height": 30,
+                        "width": 6,
+                        "x": 0,
+                        "y": 2010
+                    }
+                }
+            ],
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828578,
+                "nanoseconds": 1660828578953037905,
+                "text": "2022-08-18 15:16:18 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331104.png",
+            "count": 0,
+            "duration": "96.887 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331104.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828579,
+                "nanoseconds": 1660828579876127720,
+                "text": "2022-08-18 15:16:19 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331105.png",
+            "count": 0,
+            "duration": "98.517 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331105.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828580,
+                "nanoseconds": 1660828580786135380,
+                "text": "2022-08-18 15:16:20 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331106.png",
+            "count": 0,
+            "duration": "96.166 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331106.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828581,
+                "nanoseconds": 1660828581723551049,
+                "text": "2022-08-18 15:16:21 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331107.png",
+            "count": 0,
+            "duration": "95.902 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331107.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828582,
+                "nanoseconds": 1660828582651494789,
+                "text": "2022-08-18 15:16:22 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331108.png",
+            "count": 0,
+            "duration": "95.885 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331108.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828583,
+                "nanoseconds": 1660828583580391308,
+                "text": "2022-08-18 15:16:23 +0200"
+            },
+            "type": "image/png"
+        },
+        {
+            "annotated_image": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out/1660814741_zoex_0331025_0331109-331109.png",
+            "count": 0,
+            "duration": "95.149 milliseconds",
+            "filename": "1660814741_zoex_0331025_0331109-331109.png",
+            "original_height": 2160,
+            "original_width": 3840,
+            "resized_height": 2160,
+            "resized_width": 3840,
+            "tiles": {
+                "height": 1080,
+                "horizontal": 4,
+                "vertical": 2,
+                "width": 960
+            },
+            "timestamp": {
+                "epoch": 1660828584,
+                "nanoseconds": 1660828584533513127,
+                "text": "2022-08-18 15:16:24 +0200"
+            },
+            "type": "image/png"
+        }
+    ],
+    "network": {
+        "cfg": "/media/data/workspace/yolov5_playground/yolo_data/960_1088/bird_detector.cfg",
+        "loading": "461.401 milliseconds",
+        "names": "",
+        "weights": "/media/data/workspace/yolov5_playground/yolo_data/960_1088/bird_detector_final.weights"
+    },
+    "settings": {
+        "driver": "darknet",
+        "enable_tiles": true,
+        "force_greyscale": false,
+        "hierarchy": 0.5,
+        "include_percentage": true,
+        "keep_annotations": true,
+        "nms": 0.20000000298023224,
+        "outdir": "/media/data/local_data/sequences/1660814741_zoex_0331025_0331109/yolov4_out",
+        "snapping": false,
+        "threshold": 0.05000000074505806
+    },
+    "timestamp": {
+        "epoch": 1660828506,
+        "text": "2022-08-18 15:15:06 +0200"
+    }
+}

@@ -1,0 +1,84 @@
+left;right;weight;processor;processor_args
+S;SS_SI;1;bird_count_processor;bird_count_eq: 1
+S;SS_PL;1;bird_count_processor;bird_count_gt: 1
+S;SS_SOUND_SI;1;is_bird_sound_processor;
+SS_SI;CD_SI SUBJ_SI FLIGHT_SI DIR PP;1;bird_count_processor;bird_count_eq: 1
+SS_PL;CD_PL SUBJ_PL FLIGHT_PL DIR PP ;1;bird_count_processor;bird_count_gt: 1
+SS_SI;CD_SI SUBJ_SI FLIGHT_SI TIME DIR PP;1;bird_count_processor;bird_count_eq: 1
+SS_PL;CD_PL SUBJ_PL FLIGHT_PL TIME DIR PP ;1;bird_count_processor;bird_count_gt: 1
+SS_SI;DIR FLIGHT_SI TIME CD_SI SUBJ_SI PP;1;bird_count_processor;bird_count_eq: 1
+SS_PL;DIR FLIGHT_PL TIME CD_PL SUBJ_PL PP;1;bird_count_processor;bird_count_gt: 1
+SS_SI;DIR FLIGHT_SI CD_SI SUBJ_SI TIME PP;1;bird_count_processor;bird_count_eq: 1
+SS_PL;DIR FLIGHT_PL CD_PL SUBJ_PL TIME PP;1;bird_count_processor;bird_count_gt: 1
+SS_SI;DIR FLIGHT_SI CD_SI SUBJ_SI PP;1;bird_count_processor;bird_count_eq: 1
+SS_PL;DIR FLIGHT_PL CD_PL SUBJ_PL PP;1;bird_count_processor;bird_count_gt: 1
+SS_SI;FLAP FLIGHT_SI CD_SI SUBJ_SI DIR PP;1;bird_count_processor;bird_count_eq: 1
+SS_PL;FLAP FLIGHT_PL CD_PL SUBJ_PL DIR PP;1;bird_count_processor;bird_count_gt: 1
+SS_SI;FLAP FLIGHT_SI TIME CD_SI SUBJ_SI DIR PP;1;bird_count_processor;bird_count_eq: 1
+SS_PL;FLAP FLIGHT_PL TIME CD_PL SUBJ_PL DIR PP;1;bird_count_processor;bird_count_gt: 1
+SS_SI;CD_SI SUBJ_SI FLIGHT_SI FLAP DIR PP ;1;bird_count_processor;bird_count_eq: 1
+SS_PL;CD_PL SUBJ_PL FLIGHT_PL FLAP DIR PP ;1;bird_count_processor;bird_count_gt: 1
+SS_SI;CD_SI SUBJ_SI FLIGHT_SI TIME FLAP DIR PP ;1;bird_count_processor;bird_count_eq: 1
+SS_PL;CD_PL SUBJ_PL FLIGHT_PL TIME FLAP DIR PP ;1;bird_count_processor;bird_count_gt: 1
+SS_SI;DIR FLIGHT_SI FLAP CD_SI SUBJ_SI PP ;1;bird_count_processor;bird_count_eq: 1
+SS_PL;DIR FLIGHT_PL FLAP CD_PL SUBJ_PL PP ;1;bird_count_processor;bird_count_gt: 1
+SS_SI;DIR FLIGHT_SI TIME FLAP CD_SI SUBJ_SI PP ;1;bird_count_processor;bird_count_eq: 1
+SS_PL;DIR FLIGHT_PL TIME FLAP CD_PL SUBJ_PL PP ;1;bird_count_processor;bird_count_gt: 1
+SS_SI;DIR FLIGHT_SI CD_SI SUBJ_SI FLAP  PP ;1;bird_count_processor;bird_count_eq: 1
+SS_PL;DIR FLIGHT_PL CD_PL SUBJ_PL FLAP  PP ;1;bird_count_processor;bird_count_gt: 1
+SS_SI;DIR FLIGHT_SI TIME CD_SI SUBJ_SI FLAP  PP ;1;bird_count_processor;bird_count_eq: 1
+SS_PL;DIR FLIGHT_PL TIME CD_PL SUBJ_PL FLAP  PP ;1;bird_count_processor;bird_count_gt: 1
+SS_SI;'Der' ATT_ORIENT_B 'ist' ADJ_LIGHT_SI PP ATT_QUAL 'ist der' SUBJ_SI_NOM 'zu' V_SEE_PL PP;0.2;bird_count_processor;bird_count_eq: 1
+SS_PL;'Der' ATT_ORIENT_B 'ist' ADJ_LIGHT_SI PP ATT_QUAL 'sind die' SUBJ_PL_NOM 'zu' V_SEE_PL PP;0.2;bird_count_processor;bird_count_gt: 1
+SS_SI;'Der' ATT_ORIENT_B 'ist' ADJ_LIGHT_SI PP 'Aber der' SUBJ_SI_NOM V_SEE_SI ATT_QUAL PP;0.2;bird_count_processor;bird_count_eq: 1
+SS_PL;'Der' ATT_ORIENT_B 'ist' ADJ_LIGHT_SI PP 'Aber die' SUBJ_PL_NOM V_SEE_PL ATT_QUAL PP;0.2;bird_count_processor;bird_count_gt: 1
+SS_PL;'Wenn es' ATT_TEMP 'wird' CC V_FLIGHT_PL 'die' SUBJ_PL 'gen' NN_ORIENT PP 'Um diese Jahreszeit' QQ;1;bird_count_processor;bird_count_gt: 1
+SS_PL;'Wenn es' ATT_TEMP 'wird' CC V_FLIGHT_PL 'die' SUBJ_PL 'gen' NN_ORIENT PP QUESTION QQ;1;bird_count_processor;bird_count_gt: 1
+SS_SI;'Der' ATT_ORIENT_B 'ist' ADJ_LIGHT_SI PP 'Aber der' SUBJ_SI_NOM V_SEE_SI ATT_QUAL PP;0.2;bird_count_processor;bird_count_eq: 1
+SS_PL;'Der' ATT_ORIENT_B 'ist' ADJ_LIGHT_SI PP 'Aber die' SUBJ_PL_NOM V_SEE_PL ATT_QUAL PP;0.2;bird_count_processor;bird_count_gt: 1
+DIR;ORIENT;1;always_include_processor;
+ORIENT;'gen' NN_ORIENT;1;always_include_processor;
+ORIENT;'gen' NN_PLACES;1;always_include_processor;
+ORIENT;'Richtung' NN_ORIENT;1;always_include_processor;
+ORIENT;'Richtung' NN_PLACES;1;always_include_processor;
+ORIENT;ATT_ORIENT;1;always_include_processor;
+ORIENT;ATT_ORIENT_A ATT_ORIENT_B;1;always_include_processor;
+ORIENT;ATT_ORIENT_A ADJ_LIGHT_SI_AKK ATT_ORIENT_B;1;always_include_processor;
+FLIGHT_SI;V_FLIGHT_SI;1;always_include_processor;
+FLIGHT_PL;V_FLIGHT_PL;1;always_include_processor;
+FLIGHT_SI;V_FLIGHT_SI ATT_FLIGHT;1;always_include_processor;
+FLIGHT_PL;V_FLIGHT_PL ATT_FLIGHT;1;always_include_processor;
+FLAP;'mit' ADJ_FLAP_PL NN_FLAP_PL;1;always_include_processor;
+FLAP;'mit' '{flaps_sec}' NN_FLAP_PL 'pro Sekunde';1;always_include_processor;
+SUBJ_SI;SUBJ_SI_M;1;always_include_processor;
+SUBJ_SI;SUBJ_SI_N;1;always_include_processor;
+SUBJ_SI;SUBJ_SI_F;1;always_include_processor;
+SUBJ_SI_NOM;NN_BIRD_SI;1;always_include_processor;
+SUBJ_SI_NOM;ADJ_SPEED_SI_NOM NN_BIRD_SI;1;always_include_processor;
+SUBJ_SI_M;NN_BIRD_SI_M;1;always_include_processor;
+SUBJ_SI_M;NN_SHAPE_SI_M;0.1;always_include_processor;
+SUBJ_SI_M;ADJ_SPEED_SI_M NN_BIRD_SI_M;1;always_include_processor;
+SUBJ_SI_M;ADJ_SPEED_SI_M NN_SHAPE_SI_M;0.1;always_include_processor;
+SUBJ_SI_N;NN_BIRD_SI_N;1;always_include_processor;
+SUBJ_SI_N;NN_SHAPE_SI_N;0.1;always_include_processor;
+SUBJ_SI_N;ADJ_SPEED_SI_N NN_BIRD_SI_N;1;always_include_processor;
+SUBJ_SI_N;ADJ_SPEED_SI_N NN_SHAPE_SI_N;0.1;always_include_processor;
+SUBJ_SI_F;NN_BIRD_SI_F;1;always_include_processor;
+SUBJ_SI_F;NN_SHAPE_SI_F;0.1;always_include_processor;
+SUBJ_SI_F;ADJ_SPEED_SI_F NN_BIRD_SI_F;1;always_include_processor;
+SUBJ_SI_F;ADJ_SPEED_SI_F NN_SHAPE_SI_F;0.1;always_include_processor;
+SUBJ_PL;NN_BIRD_PL;1;always_include_processor;
+SUBJ_PL;NN_SHAPE_PL;0.1;always_include_processor;
+SUBJ_PL;ADJ_SPEED_PL NN_BIRD_PL;1;always_include_processor;
+SUBJ_PL;ADJ_SPEED_PL NN_SHAPE_PL;0.1;always_include_processor;
+SUBJ_PL_NOM;NN_BIRD_PL;1;always_include_processor;
+SUBJ_PL_NOM;ADJ_SPEED_PL_NOM NN_BIRD_PL;1;always_include_processor;
+TIME;ATT_TIME;1;always_include_processor;
+NN_BIRD_SI;NN_BIRD_SI_M;1;always_include_processor;
+NN_BIRD_SI;NN_BIRD_SI_F;0.001;always_include_processor;
+NN_BIRD_SI;NN_BIRD_SI_N;1;always_include_processor;
+SS_SOUND_SI;'{common_species_name}' V_CALL_SI ATT_ASTRO;1;is_bird_sound_processor;
+SS_SOUND_SI;'{common_species_name}' V_CALL_SI;1;is_bird_sound_processor;
+SS_SOUND_SI;ATT_ASTRO V_CALL_SI '{common_species_name}';1;is_bird_sound_processor;
+SS_SOUND_SI;'Es' V_CALL_SI '{common_species_name}';1;is_bird_sound_processor;
+SS_SOUND_SI;'Es' V_CALL_SI '{common_species_name}' ATT_ASTRO;1;is_bird_sound_processor;
