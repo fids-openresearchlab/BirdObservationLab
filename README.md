@@ -8,7 +8,7 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 -->
-  <h3 align="center">BirdObs</h3>
+  <h3 align="center">BirdObservationLab</h3>
 
   <p align="center">
     A flying bird observation system
