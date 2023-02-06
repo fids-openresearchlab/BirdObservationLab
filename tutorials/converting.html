@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Converting your data into Trajectory objects &mdash; birdwatchpy 0.3 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> birdwatchpy
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../GS/About.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GS/Installation.html">Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GS/Installation.html#installation-and-compatibility">Installation and compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GS/Setup.html">Setup configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GS/Support.html">Getting Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GS/Contributing.html">Contributing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="export_sequence_folder.html">Export Sequence to Folder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="export_mot.html">Export Sequences in MOT Challange format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="convert_to_scalabel_format.html">Load Data into Scalable</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/sequence_data.html">Sequence Data Objects</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">birdwatchpy</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Converting your data into Trajectory objects</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/tutorials/converting.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="converting-your-data-into-trajectory-objects">
+<h1>Converting your data into Trajectory objects<a class="headerlink" href="#converting-your-data-into-trajectory-objects" title="Permalink to this headline"></a></h1>
+<p>Yupi stores data using an efficient internal representation based on numpy arrays. If you already have some trajectory data, convert it is possible to convert it into a yupi <code class="xref py py-class docutils literal notranslate"><span class="pre">Trajectory</span></code>. Next, we show how to create the same trajectory in different ways.</p>
+<section id="creating-trajectories-with-x-y-and-z-information">
+<h2>Creating trajectories with x, y and z information<a class="headerlink" href="#creating-trajectories-with-x-y-and-z-information" title="Permalink to this headline"></a></h2>
+<p>When the data belongs to trajectories of dimensions within 1 and 3, it is possible to create a <code class="xref py py-class docutils literal notranslate"><span class="pre">Trajectory</span></code> by assigning each axis data directly:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">yupi</span> <span class="kn">import</span> <span class="n">Trajectory</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.63</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.37</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.24</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.08</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.19</span><span class="p">,</span> <span class="mf">0.82</span><span class="p">,</span> <span class="mf">1.63</span><span class="p">,</span> <span class="mf">1.99</span><span class="p">,</span> <span class="mf">1.85</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.98</span><span class="p">,</span> <span class="mf">1.24</span><span class="p">,</span> <span class="mf">0.69</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.3</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.23</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.72</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.63</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.01</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.06</span><span class="p">,</span> <span class="mf">0.94</span><span class="p">]</span>
+
+<span class="n">track</span> <span class="o">=</span> <span class="n">Trajectory</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">traj_id</span><span class="o">=</span><span class="s2">&quot;Spiral&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For the three-dimensional case, you can pass a variable <code class="docutils literal notranslate"><span class="pre">z</span></code> to the constructor. If the trajectory has more than 4 dimensions, check the next way of creating the object.</p>
+</section>
+<section id="creating-trajectories-with-independent-axis-information">
+<h2>Creating trajectories with independent axis information<a class="headerlink" href="#creating-trajectories-with-independent-axis-information" title="Permalink to this headline"></a></h2>
+<p>An extension to the previous case, that can be useful for Trajectories of higher dimensions, is to provide all the axis information in a single variable. The following example shows how to proceed in this case:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">yupi</span> <span class="kn">import</span> <span class="n">Trajectory</span>
+
+<span class="n">dims</span> <span class="o">=</span> <span class="p">[</span>
+   <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.63</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.37</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.24</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.08</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.19</span><span class="p">,</span> <span class="mf">0.82</span><span class="p">,</span> <span class="mf">1.63</span><span class="p">,</span> <span class="mf">1.99</span><span class="p">,</span> <span class="mf">1.85</span><span class="p">],</span>
+   <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.98</span><span class="p">,</span> <span class="mf">1.24</span><span class="p">,</span> <span class="mf">0.69</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.3</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.23</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.72</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.63</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.01</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.06</span><span class="p">,</span> <span class="mf">0.94</span><span class="p">]</span>
+<span class="p">]</span>
+
+<span class="n">track</span> <span class="o">=</span> <span class="n">Trajectory</span><span class="p">(</span><span class="n">dimensions</span><span class="o">=</span><span class="n">dims</span><span class="p">,</span> <span class="n">traj_id</span><span class="o">=</span><span class="s2">&quot;Spiral&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="creating-trajectories-with-independent-samples">
+<h2>Creating trajectories with independent samples<a class="headerlink" href="#creating-trajectories-with-independent-samples" title="Permalink to this headline"></a></h2>
+<p>There is also a third way of convert your data into a <code class="xref py py-class docutils literal notranslate"><span class="pre">Trajectory</span></code>. It requires to pass a list of d-dimensional data points:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">yupi</span> <span class="kn">import</span> <span class="n">Trajectory</span>
+
+<span class="n">points</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.63</span><span class="p">,</span> <span class="mf">0.98</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.37</span><span class="p">,</span> <span class="mf">1.24</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">1.24</span><span class="p">,</span> <span class="mf">0.69</span><span class="p">],</span>
+          <span class="p">[</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.3</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">1.08</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.23</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.19</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.72</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.82</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.63</span><span class="p">],</span>
+          <span class="p">[</span><span class="mf">1.63</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.01</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.99</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.06</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.85</span><span class="p">,</span> <span class="mf">0.94</span><span class="p">]]</span>
+
+<span class="n">track</span> <span class="o">=</span> <span class="n">Trajectory</span><span class="p">(</span><span class="n">points</span><span class="o">=</span><span class="n">points</span><span class="p">,</span> <span class="n">traj_id</span><span class="o">=</span><span class="s2">&quot;Spiral&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Note that the dimension of each point must be equal, and it will define the dimension of the trajectory.</p>
+</section>
+<section id="a-brief-comment-on-time">
+<h2>A brief comment on time<a class="headerlink" href="#a-brief-comment-on-time" title="Permalink to this headline"></a></h2>
+<p>By default, the data will be assumed to be uniformly sampled in time, at a sampling time of 1. If you have the corresponding sequence of time data, you can pass it to the constructor using <code class="docutils literal notranslate"><span class="pre">t</span></code> parameter. Alternatively, if the data is uniformly sampled, you can only pass the value of <code class="docutils literal notranslate"><span class="pre">dt</span></code>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Jonathan Kossick.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

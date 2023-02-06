@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Extracting data from an ensemble of trajectories &mdash; birdwatchpy 0.3 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> birdwatchpy
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../GS/About.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GS/Installation.html">Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GS/Installation.html#installation-and-compatibility">Installation and compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GS/Setup.html">Setup configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GS/Support.html">Getting Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GS/Contributing.html">Contributing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="export_sequence_folder.html">Export Sequence to Folder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="export_mot.html">Export Sequences in MOT Challange format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="convert_to_scalabel_format.html">Load Data into Scalable</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/sequence_data.html">Sequence Data Objects</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">birdwatchpy</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Extracting data from an ensemble of trajectories</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/tutorials/collecting.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="extracting-data-from-an-ensemble-of-trajectories">
+<h1>Extracting data from an ensemble of trajectories<a class="headerlink" href="#extracting-data-from-an-ensemble-of-trajectories" title="Permalink to this headline"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"></a></h2>
+<p>Collecting data such as displacements, velocities, speeds is a common task when
+analyzing trajectory data. Therefore, looping over an ensemble of trajectories
+ends up in repeated blocks of code specially when the data is wanted to, for
+instance, be analyzed at different time scales or be concatenated.</p>
+<p>This tutorial provides an step-by-step view over the <code class="xref py py-func docutils literal notranslate"><span class="pre">collect()</span></code>
+function. It gets a friendly way to “collect” the basic time series researchers
+that process trajectories are continuously dealing with.</p>
+</section>
+<section id="let-s-begin">
+<h2>Let’s begin<a class="headerlink" href="#let-s-begin" title="Permalink to this headline"></a></h2>
+<p>Let us first create a fake ensemble of just two (for the sake of illustration)
+trajectories using the <code class="xref py py-class docutils literal notranslate"><span class="pre">Trajectory</span></code> class from <code class="docutils literal notranslate"><span class="pre">yupi</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">yupi</span> <span class="kn">import</span> <span class="n">Trajectory</span>
+<span class="kn">from</span> <span class="nn">yupi.stats</span> <span class="kn">import</span> <span class="n">collect</span>
+
+<span class="c1"># x-coordinate for the first/second trajectory</span>
+<span class="n">x1</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">x2</span> <span class="o">=</span> <span class="n">x1</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="c1"># y-coordinates</span>
+<span class="n">y1</span> <span class="o">=</span> <span class="n">x1</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">y2</span> <span class="o">=</span> <span class="n">x2</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="c1"># Time step and ids</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">.5</span>
+<span class="n">id_traj1</span> <span class="o">=</span> <span class="s1">&#39;traj_01&#39;</span>
+<span class="n">id_traj2</span> <span class="o">=</span> <span class="s1">&#39;traj_02&#39;</span>
+
+<span class="c1"># Instantiating the class</span>
+<span class="n">traj1</span> <span class="o">=</span> <span class="n">Trajectory</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x1</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y1</span><span class="p">,</span> <span class="n">dt</span><span class="o">=</span><span class="n">dt</span><span class="p">,</span> <span class="n">traj_id</span><span class="o">=</span><span class="n">id_traj1</span><span class="p">)</span>
+<span class="n">traj2</span> <span class="o">=</span> <span class="n">Trajectory</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x2</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y2</span><span class="p">,</span> <span class="n">dt</span><span class="o">=</span><span class="n">dt</span><span class="p">,</span> <span class="n">traj_id</span><span class="o">=</span><span class="n">id_traj2</span><span class="p">)</span>
+
+<span class="c1"># Gather in an ensemble</span>
+<span class="n">trajs</span> <span class="o">=</span> <span class="p">[</span><span class="n">traj1</span><span class="p">,</span> <span class="n">traj2</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>At this point, it is quite easy using <code class="docutils literal notranslate"><span class="pre">yupi</span></code> to extract some time series from a
+single trajectory. For example:</p>
+<ul class="simple">
+<li><p>position: <code class="docutils literal notranslate"><span class="pre">traj1.r</span></code></p></li>
+<li><p>displacement: <code class="docutils literal notranslate"><span class="pre">traj1.r.delta</span></code></p></li>
+<li><p>velocity: <code class="docutils literal notranslate"><span class="pre">traj1.v</span></code></p></li>
+<li><p>speed: <code class="docutils literal notranslate"><span class="pre">traj1.v.norm</span></code></p></li>
+<li><p>distance: <code class="docutils literal notranslate"><span class="pre">traj1.delta_r.norm</span></code></p></li>
+</ul>
+<p>But how to get these from an ensemble? How to extract it when time scales are
+different from the time step? In what is next, these questions are answered
+with some illustrative examples while a detailed explanation of every parameter
+is given on the <code class="xref py py-func docutils literal notranslate"><span class="pre">collect()</span></code> function.</p>
+</section>
+<section id="collect-general-function">
+<h2>Collect general function<a class="headerlink" href="#collect-general-function" title="Permalink to this headline"></a></h2>
+<p>By default, the <code class="xref py py-func docutils literal notranslate"><span class="pre">collect()</span></code> function takes a list trajectory an returns
+an array with all the positional data of each trajectory concatenated.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">collect</span><span class="p">(</span><span class="n">trajs</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>array([[ 0.  0.]
+       [ 2.  4.]
+       [ 4. 16.]
+       [ 6. 36.]
+       [ 8. 64.]
+       [ 1.  1.]
+       [ 3.  9.]
+       [ 5. 25.]
+       [ 7. 49.]
+       [ 9. 81.]])
+</pre></div>
+</div>
+<p>The following sections will describe all the parameters available that manipulate
+the resulting data within the <code class="xref py py-func docutils literal notranslate"><span class="pre">collect()</span></code> function.</p>
+<section id="the-lag-parameter">
+<h3>The <code class="docutils literal notranslate"><span class="pre">lag</span></code> parameter<a class="headerlink" href="#the-lag-parameter" title="Permalink to this headline"></a></h3>
+<p>Suppose the underlying ensemble of trajectories as being realizations of a
+process with different statistical properties at different time scales. For
+such a case, <code class="docutils literal notranslate"><span class="pre">lag</span></code> can be helpful if it is set properly. If <code class="docutils literal notranslate"><span class="pre">lag</span></code> is an
+integer it is taken as the number of samples. On the other hand, if <code class="docutils literal notranslate"><span class="pre">lag</span></code> is
+of type <code class="docutils literal notranslate"><span class="pre">float</span></code>, it is taken as the time to lag where its units are those of
+the time array (i.e., <code class="docutils literal notranslate"><span class="pre">traj.t</span></code>).</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">lag</span></code> is not set, the default value is <code class="docutils literal notranslate"><span class="pre">lag=0</span></code> will be assumed.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">collect</span><span class="p">(</span><span class="n">trajs</span><span class="p">,</span> <span class="n">lag</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>array([[ 4., 16.],
+       [ 4., 32.],
+       [ 4., 48.],
+       [ 4., 24.],
+       [ 4., 40.],
+       [ 4., 56.]])
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">collect</span><span class="p">(</span><span class="n">trajs</span><span class="p">,</span> <span class="n">lag</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>array([[ 4., 16.],
+       [ 4., 32.],
+       [ 4., 48.],
+       [ 4., 24.],
+       [ 4., 40.],
+       [ 4., 56.]])
+</pre></div>
+</div>
+</section>
+<section id="the-concat-parameter">
+<h3>The <code class="docutils literal notranslate"><span class="pre">concat</span></code> parameter<a class="headerlink" href="#the-concat-parameter" title="Permalink to this headline"></a></h3>
+<p>As we show in the very first example, the code for <code class="docutils literal notranslate"><span class="pre">concat(trajs)</span></code> will return
+an array with all the positional data of each trajectory concatenated.</p>
+<p>If the data is wanted to be split by realizations, the <code class="docutils literal notranslate"><span class="pre">concat</span></code> parameter
+should be set to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">collect</span><span class="p">(</span><span class="n">trajs</span><span class="p">,</span> <span class="n">concat</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>array([[[ 0.,  0.],
+        [ 2.,  4.],
+        [ 4., 16.],
+        [ 6., 36.],
+        [ 8., 64.]],
+
+       [[ 1.,  1.],
+        [ 3.,  9.],
+        [ 5., 25.],
+        [ 7., 49.],
+        [ 9., 81.]]])
+</pre></div>
+</div>
+</section>
+<section id="the-warnings-parameter">
+<h3>The <code class="docutils literal notranslate"><span class="pre">warnings</span></code> parameter<a class="headerlink" href="#the-warnings-parameter" title="Permalink to this headline"></a></h3>
+<p>If the given lag is larger than one of the trajectories length, a warning
+message will arise and the position of the trajectory in the ensemble and its
+<em>id</em> will be shown. The <code class="xref py py-func docutils literal notranslate"><span class="pre">collect()</span></code> function will skip this
+trajectory. To avoid warning messages set the parameter to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">traj1</span><span class="o">.</span><span class="n">dt</span> <span class="o">=</span> <span class="mf">.01</span>  <span class="c1"># redefining dt for the first trajectory</span>
+<span class="n">collect</span><span class="p">(</span><span class="n">trajs</span><span class="p">,</span> <span class="n">lag</span><span class="o">=</span><span class="n">dt</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>15:07:11 [WARNING] Trajectory 0 with id=traj_01 is shorten than 50 samples
+array([[ 2.,  8.],
+       [ 2., 16.],
+       [ 2., 24.],
+       [ 2., 32.]])
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">collect</span><span class="p">(</span><span class="n">trajs</span><span class="p">,</span> <span class="n">lag</span><span class="o">=</span><span class="n">dt</span><span class="p">,</span> <span class="n">warnings</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>array([[ 2.,  8.],
+       [ 2., 16.],
+       [ 2., 24.],
+       [ 2., 32.]])
+</pre></div>
+</div>
+</section>
+<section id="the-velocity-parameter">
+<h3>The <code class="docutils literal notranslate"><span class="pre">velocity</span></code> parameter<a class="headerlink" href="#the-velocity-parameter" title="Permalink to this headline"></a></h3>
+<p>Some times it is useful to have the velocity of the trajectory. To indicate that
+the velocity is wanted, the <code class="docutils literal notranslate"><span class="pre">velocity</span></code> parameter should be set to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">collect</span><span class="p">(</span><span class="n">trajs</span><span class="p">,</span> <span class="n">velocity</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>array([[ 4.  8.]
+       [ 4. 24.]
+       [ 4. 40.]
+       [ 4. 56.]
+       [ 4. 16.]
+       [ 4. 32.]
+       [ 4. 48.]
+       [ 4. 64.]])
+</pre></div>
+</div>
+<p>Additional if the <code class="docutils literal notranslate"><span class="pre">lag</span></code> is used, the velocity will be calculated according
+the given lag.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">collect</span><span class="p">(</span><span class="n">trajs</span><span class="p">,</span> <span class="n">lag</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">velocity</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>array([[ 4. 16.]
+       [ 4. 32.]
+       [ 4. 48.]
+       [ 4. 24.]
+       [ 4. 40.]
+       [ 4. 56.]])
+</pre></div>
+</div>
+</section>
+<section id="the-func-parameter">
+<h3>The <code class="docutils literal notranslate"><span class="pre">func</span></code> parameter<a class="headerlink" href="#the-func-parameter" title="Permalink to this headline"></a></h3>
+<p>All the examples described above only returns raw data from the trajectories. If
+the data is wanted to be transformed, the <code class="docutils literal notranslate"><span class="pre">func</span></code> parameter should be set to
+a function that will be applied to each vector (before concatenation).</p>
+<p>This could help if we want to extract for example the delta velocity of the
+trajectories.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">collect</span><span class="p">(</span><span class="n">trajs</span><span class="p">,</span> <span class="n">velocity</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">func</span><span class="o">=</span><span class="k">lambda</span> <span class="n">vec</span><span class="p">:</span> <span class="n">vec</span><span class="o">.</span><span class="n">delta</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>array([[ 0. 16.]
+       [ 0. 16.]
+       [ 0. 16.]
+       [ 0. 16.]
+       [ 0. 16.]
+       [ 0. 16.]])
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">collect</span><span class="p">(</span><span class="n">trajs</span><span class="p">,</span> <span class="n">func</span><span class="o">=</span><span class="k">lambda</span> <span class="n">vec</span><span class="p">:</span> <span class="n">vec</span><span class="o">.</span><span class="n">norm</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>array([ 4.47213595 12.16552506 20.09975124 28.0713377 8.24621125 16.1245155
+       24.08318916 32.06243908])
+</pre></div>
+</div>
+</section>
+<section id="the-at-parameter">
+<h3>The <code class="docutils literal notranslate"><span class="pre">at</span></code> parameter<a class="headerlink" href="#the-at-parameter" title="Permalink to this headline"></a></h3>
+<p>When the data is wanted to be extracted at a certain time (or index), the
+<code class="docutils literal notranslate"><span class="pre">at</span></code> parameter should be used. If <code class="docutils literal notranslate"><span class="pre">at</span></code> is an integer, it is taken as the
+index. If <code class="docutils literal notranslate"><span class="pre">at</span></code> is a float, it is taken as the time (in this case the
+index is calculated using the trajectory’s dt value).</p>
+<p>This paramenter can not be used with <code class="docutils literal notranslate"><span class="pre">lag</span></code> parameter at the same time. In
+addition, When the <code class="docutils literal notranslate"><span class="pre">at</span></code> parameter is used, the <code class="docutils literal notranslate"><span class="pre">concat</span></code> parameter is
+ignored.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">collect</span><span class="p">(</span><span class="n">trajs</span><span class="p">,</span> <span class="n">at</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>array([[ 2.,  4.],
+       [ 3.,  9.]])
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">collect</span><span class="p">(</span><span class="n">trajs</span><span class="p">,</span> <span class="n">at</span><span class="o">=</span><span class="mf">.5</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>array([[ 2.,  4.],
+       [ 3.,  9.]])
+</pre></div>
+</div>
+</section>
+</section>
+<section id="collect-specific-functions">
+<h2>Collect specific functions<a class="headerlink" href="#collect-specific-functions" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p><code class="xref py py-func docutils literal notranslate"><span class="pre">collect_at_step()</span></code></p></li>
+<li><p><code class="xref py py-func docutils literal notranslate"><span class="pre">collect_at_time()</span></code></p></li>
+<li><p><code class="xref py py-func docutils literal notranslate"><span class="pre">collect_step_lagged()</span></code></p></li>
+<li><p><code class="xref py py-func docutils literal notranslate"><span class="pre">collect_time_lagged()</span></code></p></li>
+</ul>
+<p>These functions are just spetializations of the <code class="xref py py-func docutils literal notranslate"><span class="pre">collect()</span></code>
+function. All of them use the <code class="xref py py-func docutils literal notranslate"><span class="pre">collect()</span></code> function internally.
+Each of them has a different usage depending on if the data is wanted to be
+extracted at a certain time or step or if it is wanted to be extracted lagged.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Jonathan Kossick.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

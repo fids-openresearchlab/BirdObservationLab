@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Load Data into Scalable &mdash; birdwatchpy 0.3 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Sequence Data Objects" href="../advanced/sequence_data.html" />
+    <link rel="prev" title="Export Sequences in MOT Challange format" href="export_mot.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> birdwatchpy
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../GS/About.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GS/Installation.html">Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GS/Installation.html#installation-and-compatibility">Installation and compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GS/Setup.html">Setup configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GS/Support.html">Getting Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GS/Contributing.html">Contributing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="export_sequence_folder.html">Export Sequence to Folder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="export_mot.html">Export Sequences in MOT Challange format</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Load Data into Scalable</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/sequence_data.html">Sequence Data Objects</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">birdwatchpy</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Load Data into Scalable</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/tutorials/convert_to_scalabel_format.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="load-data-into-scalable">
+<h1>Load Data into Scalable<a class="headerlink" href="#load-data-into-scalable" title="Permalink to this headline"></a></h1>
+<p>Before you can create your dataset in scalable format you first will need to</p>
+<ol class="arabic simple">
+<li><p>Export desired sequences</p></li>
+<li><p>Convert the exported dataset into MOT Challange format</p></li>
+</ol>
+<p>With the dataset available in MOT format you can now create the scalabel formatted json:</p>
+<p>cd scalabel
+python3 -m scalabel.label.from_mot –input /media/data/many_bird_export2/MOT –output /media/data/many_bird_export2/scalabel_format_master</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="export_mot.html" class="btn btn-neutral float-left" title="Export Sequences in MOT Challange format" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../advanced/sequence_data.html" class="btn btn-neutral float-right" title="Sequence Data Objects" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Jonathan Kossick.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

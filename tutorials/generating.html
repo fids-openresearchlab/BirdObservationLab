@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Generating artificial Trajectory objects &mdash; birdwatchpy 0.3 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> birdwatchpy
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../GS/About.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GS/Installation.html">Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GS/Installation.html#installation-and-compatibility">Installation and compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GS/Setup.html">Setup configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GS/Support.html">Getting Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GS/Contributing.html">Contributing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="export_sequence_folder.html">Export Sequence to Folder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="export_mot.html">Export Sequences in MOT Challange format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="convert_to_scalabel_format.html">Load Data into Scalable</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/sequence_data.html">Sequence Data Objects</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">birdwatchpy</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Generating artificial Trajectory objects</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/tutorials/generating.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="generating-artificial-trajectory-objects">
+<h1>Generating artificial Trajectory objects<a class="headerlink" href="#generating-artificial-trajectory-objects" title="Permalink to this headline"></a></h1>
+<p>If you want to generate <code class="xref py py-class docutils literal notranslate"><span class="pre">Trajectory</span></code> objects based on some statistical constrains, you can use one of the available <code class="xref py py-class docutils literal notranslate"><span class="pre">Generator</span></code> to construct a list of <code class="xref py py-class docutils literal notranslate"><span class="pre">Trajectory</span></code> objects.</p>
+<section id="random-walk-generator">
+<h2>Random Walk Generator<a class="headerlink" href="#random-walk-generator" title="Permalink to this headline"></a></h2>
+<p>The <code class="xref py py-class docutils literal notranslate"><span class="pre">RandomWalkGenerator</span></code> is able to simulate the trajectories of a walker, in an arbitrary number of dimensions, according some probabilistic constrains.</p>
+<p>We can import it from generating module as:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">yupi.generators</span> <span class="kn">import</span> <span class="n">RandomWalkGenerator</span>
+</pre></div>
+</div>
+<p>As any other <code class="xref py py-class docutils literal notranslate"><span class="pre">Generator</span></code> in yupi, you can specify the parameters that define the shape of the trajectories, as well as the number of trajectories to generate:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">T</span> <span class="o">=</span> <span class="mi">500</span>     <span class="c1"># Total time (number of time steps if dt==1)</span>
+<span class="n">dim</span> <span class="o">=</span> <span class="mi">2</span>     <span class="c1"># Dimension of the walker trajectories</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">3</span>       <span class="c1"># Number of random walkers</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mi">1</span>      <span class="c1"># Time step</span>
+</pre></div>
+</div>
+<p>The <code class="xref py py-class docutils literal notranslate"><span class="pre">RandomWalkGenerator</span></code> starts the generation of every trajectory in the origin of the reference frame. Then, iteratively, it computes an increment on each dimension. The increment (also called actions) can be -1, 0 or 1, and it is taken independently on each dimension for each iteration. Additionally, the user can define a list to establish the probabilities of taking each of the available actions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">prob</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">.5</span><span class="p">,</span> <span class="mf">.1</span><span class="p">,</span> <span class="mf">.4</span><span class="p">],</span>   <span class="c1"># x-axis</span>
+        <span class="p">[</span><span class="mf">.5</span><span class="p">,</span>  <span class="mi">0</span><span class="p">,</span> <span class="mf">.5</span><span class="p">]]</span>   <span class="c1"># y-axis</span>
+</pre></div>
+</div>
+<p>Notice that the size of this list should coincide with the desired dimensions of the trajectories being generated, and each element of a list should be a 3-element list describing the probability vector of taking the actions [-1, 0, 1] in that dimension.</p>
+<p>Then, we can construct a <code class="xref py py-class docutils literal notranslate"><span class="pre">RandomWalkGenerator</span></code> with the given variables and call its generate method:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">rw</span> <span class="o">=</span> <span class="n">RandomWalkGenerator</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">dim</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">prob</span><span class="p">)</span>
+<span class="n">tr</span> <span class="o">=</span> <span class="n">rw</span><span class="o">.</span><span class="n">generate</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>In the variable <code class="docutils literal notranslate"><span class="pre">tr</span></code> we will have a list of <strong>N</strong> <code class="xref py py-class docutils literal notranslate"><span class="pre">Trajectory</span></code> objects generated using the given configuration.</p>
+<p>The generated trajectories can be inspected using the <code class="xref py py-func docutils literal notranslate"><span class="pre">plot_2D()</span></code> function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">yupi.graphics</span> <span class="kn">import</span> <span class="n">plot_2D</span>
+<span class="n">plot_2D</span><span class="p">(</span><span class="n">tr</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>:::{figure} /images/tutorial007.png
+:align: center
+:alt: Distribution in submodules
+:::</p>
+</section>
+<section id="langevin-generator">
+<span id="id1"></span><h2>Langevin Generator<a class="headerlink" href="#langevin-generator" title="Permalink to this headline"></a></h2>
+<p>The <code class="xref py py-class docutils literal notranslate"><span class="pre">LangevinGenerator</span></code> simulates trajectories governed by the
+Langevin Equation. It allows to produce <code class="xref py py-class docutils literal notranslate"><span class="pre">Trajectory</span></code> objects that quantitatively emulate several systems.</p>
+<p>To use it, we first need to define the general parameters for a generator:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">T</span> <span class="o">=</span> <span class="mi">500</span>     <span class="c1"># Total time (number of time steps if dt==1)</span>
+<span class="n">dim</span> <span class="o">=</span> <span class="mi">2</span>     <span class="c1"># Dimension of the walker trajectories</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">3</span>       <span class="c1"># Number of random walkers</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">0.5</span>    <span class="c1"># Time step</span>
+</pre></div>
+</div>
+<p>Then, some specific parameters can be set before the generator initialization:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tau</span> <span class="o">=</span> <span class="mi">1</span>               <span class="c1"># Relaxation time</span>
+<span class="n">sigma</span> <span class="o">=</span> <span class="mf">0.1</span>     <span class="c1"># Scale of the noise pdf</span>
+</pre></div>
+</div>
+<p>Finally, the generator is created and the trajectories can be generated:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">yupi.generators</span> <span class="kn">import</span> <span class="n">LangevinGenerator</span>
+<span class="n">lg</span> <span class="o">=</span> <span class="n">LangevinGenerator</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">dim</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">tau</span><span class="p">,</span> <span class="n">sigma</span><span class="p">)</span>
+<span class="n">trajectories</span> <span class="o">=</span> <span class="n">lg</span><span class="o">.</span><span class="n">generate</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The generated trajectories can be inspected using the plot_2D function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">yupi.graphics</span> <span class="kn">import</span> <span class="n">plot_2D</span>
+<span class="n">plot_2D</span><span class="p">(</span><span class="n">trajectories</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>:::{figure} /images/tutorial008.png
+:align: center
+:alt: Distribution in submodules
+:::</p>
+<p>Although not illustrated in this example, the initial
+velocities and positions can be specified in the <code class="xref py py-class docutils literal notranslate"><span class="pre">LangevinGenerator</span></code>
+creation using the <code class="docutils literal notranslate"><span class="pre">v0</span></code> and <code class="docutils literal notranslate"><span class="pre">r0</span></code> parameters respectively.</p>
+<p>A more complex application of this <code class="xref py py-class docutils literal notranslate"><span class="pre">Generator</span></code> can be seen in the <span class="xref std std-ref">Example 1</span>.</p>
+</section>
+<section id="diffusing-diffusivity-generator">
+<h2>Diffusing Diffusivity Generator<a class="headerlink" href="#diffusing-diffusivity-generator" title="Permalink to this headline"></a></h2>
+<p>The <code class="xref py py-class docutils literal notranslate"><span class="pre">DiffDiffGenerator</span></code> simulates trajectories governed by a
+diffusion process with fluctuating diffusivity. It allows to produce
+<code class="xref py py-class docutils literal notranslate"><span class="pre">Trajectory</span></code> objects that quantitatively emulate different systems.</p>
+<p>To use it, we first need to define the general parameters for a generator:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">T</span> <span class="o">=</span> <span class="mi">1000</span>   <span class="c1"># Total time of the simulation</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">5</span>      <span class="c1"># Number of trajectories</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="mf">.1</span>    <span class="c1"># Time step</span>
+<span class="n">dim</span> <span class="o">=</span> <span class="mi">2</span>    <span class="c1"># Dimension of the Trajectories</span>
+</pre></div>
+</div>
+<p>The generator is created and the trajectories can be generated:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">yupi.generators</span> <span class="kn">import</span> <span class="n">DiffDiffGenerator</span>
+<span class="n">dd</span> <span class="o">=</span> <span class="n">DiffDiffGenerator</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">N</span><span class="o">=</span><span class="n">N</span><span class="p">,</span> <span class="n">dt</span><span class="o">=</span><span class="n">dt</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="n">dim</span><span class="p">)</span>
+<span class="n">trajs</span> <span class="o">=</span> <span class="n">dd</span><span class="o">.</span><span class="n">generate</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The generated trajectories can be inspected using the plot_2D function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">yupi.graphics</span> <span class="kn">import</span> <span class="n">plot_2D</span>
+<span class="n">plot_2D</span><span class="p">(</span><span class="n">trajs</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>:::{figure} /images/tutorial010.png
+:align: center
+:alt: Diff diff generator
+:::</p>
+<p>Although not illustrated in this example, the initial positions can be
+specified in the <code class="xref py py-class docutils literal notranslate"><span class="pre">DiffDiffGenerator</span></code>
+creation using the  <code class="docutils literal notranslate"><span class="pre">r0</span></code> parameter.</p>
+</section>
+<section id="defining-a-custom-generator">
+<h2>Defining a Custom Generator<a class="headerlink" href="#defining-a-custom-generator" title="Permalink to this headline"></a></h2>
+<p>A user-defined generator can be easily added by building on top of an abstract class <code class="xref py py-class docutils literal notranslate"><span class="pre">Generator</span></code> (which is the base of the already implemented generators).</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Jonathan Kossick.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

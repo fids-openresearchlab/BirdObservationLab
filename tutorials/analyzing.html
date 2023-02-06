@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analysis of Trajectory objects &mdash; birdwatchpy 0.3 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> birdwatchpy
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../GS/About.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GS/Installation.html">Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GS/Installation.html#installation-and-compatibility">Installation and compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GS/Setup.html">Setup configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GS/Support.html">Getting Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GS/Contributing.html">Contributing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="export_sequence_folder.html">Export Sequence to Folder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="export_mot.html">Export Sequences in MOT Challange format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="convert_to_scalabel_format.html">Load Data into Scalable</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/sequence_data.html">Sequence Data Objects</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">birdwatchpy</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Analysis of Trajectory objects</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/tutorials/analyzing.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="analysis-of-trajectory-objects">
+<h1>Analysis of Trajectory objects<a class="headerlink" href="#analysis-of-trajectory-objects" title="Permalink to this headline"></a></h1>
+<p>There are several tools you can use to analyze <code class="xref py py-class docutils literal notranslate"><span class="pre">Trajectory</span></code>
+objects. To illustrate the capabilities of yupi, let us consider a list of
+<code class="xref py py-class docutils literal notranslate"><span class="pre">Trajectory</span></code> objects  generated with a Langevin Generator
+(See tutorial dedicated tutorial of <span class="xref std std-ref">Langevin Generator</span> for a more
+detailed explanation of the parameters.)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">yupi.generators</span> <span class="kn">import</span> <span class="n">LangevinGenerator</span>
+<span class="n">lg</span> <span class="o">=</span> <span class="n">LangevinGenerator</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span>  <span class="mf">0.1</span><span class="p">)</span>
+<span class="n">trajs</span> <span class="o">=</span> <span class="n">lg</span><span class="o">.</span><span class="n">generate</span><span class="p">()</span>
+</pre></div>
+</div>
+<section id="two-dimensional-spatial-projections">
+<h2>Two-dimensional spatial projections<a class="headerlink" href="#two-dimensional-spatial-projections" title="Permalink to this headline"></a></h2>
+<p>The most basic analysis tool is the plot of the trajectories in the space. If
+you have a list of <code class="xref py py-class docutils literal notranslate"><span class="pre">Trajectory</span></code> objects, like the ones you get
+from a generator, you can  plot them with:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">yupi.graphics</span> <span class="kn">import</span> <span class="n">plot_2D</span>
+<span class="n">plot_2D</span><span class="p">(</span><span class="n">trajs</span><span class="p">[:</span><span class="mi">10</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>:::{figure} /images/tutorial001.png
+:align: center
+:alt: Distribution in submodules
+:::</p>
+<p>Notice that we limited to 10 the number of trajectories to plot for the sake of observability,
+but we will be using the full list of trajectories (traj) all over this tutorial.</p>
+</section>
+<section id="three-dimensional-spatial-projections">
+<h2>Three-dimensional spatial projections<a class="headerlink" href="#three-dimensional-spatial-projections" title="Permalink to this headline"></a></h2>
+<p>Plotting in three dimensions can be achieved in a similar way. Let us generate 3D trajectories:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">yupi.generators</span> <span class="kn">import</span> <span class="n">LangevinGenerator</span>
+<span class="n">lg</span> <span class="o">=</span> <span class="n">LangevinGenerator</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span>  <span class="mf">0.1</span><span class="p">)</span>
+<span class="n">trajs3D</span> <span class="o">=</span> <span class="n">lg</span><span class="o">.</span><span class="n">generate</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Then, we can plot them using:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">yupi.graphics</span> <span class="kn">import</span> <span class="n">plot_3D</span>
+<span class="n">plot_3D</span><span class="p">(</span><span class="n">trajs3D</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>:::{figure} /images/tutorial011.png
+:align: center
+:alt: Distribution in submodules
+:::</p>
+</section>
+<section id="histogram-of-velocity">
+<h2>Histogram of Velocity<a class="headerlink" href="#histogram-of-velocity" title="Permalink to this headline"></a></h2>
+<p>The analysis of the distribution of velocities among all the samples of an
+ensemble of trajectories is also possible using:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">yupi.stats</span> <span class="kn">import</span> <span class="n">speed_ensemble</span>
+<span class="kn">from</span> <span class="nn">yupi.graphics</span> <span class="kn">import</span> <span class="n">plot_velocity_hist</span>
+
+<span class="n">v</span> <span class="o">=</span> <span class="n">speed_ensemble</span><span class="p">(</span><span class="n">trajs</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plot_velocity_hist</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>:::{figure} /images/tutorial002.png
+:align: center
+:alt: Distribution in submodules
+:::</p>
+</section>
+<section id="histogram-of-turning-angles">
+<h2>Histogram of Turning Angles<a class="headerlink" href="#histogram-of-turning-angles" title="Permalink to this headline"></a></h2>
+<p>The analysis of the distribution of turning angles allows to understand how
+likely is the moving object to turn to specific directions during its motion.
+It can be observe with yupi by using:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">yupi.stats</span> <span class="kn">import</span> <span class="n">turning_angles_ensemble</span>
+<span class="kn">from</span> <span class="nn">yupi.graphics</span> <span class="kn">import</span> <span class="n">plot_angles_hist</span>
+
+<span class="n">theta</span> <span class="o">=</span> <span class="n">turning_angles_ensemble</span><span class="p">(</span><span class="n">trajs</span><span class="p">)</span>
+<span class="n">plot_angles_hist</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>:::{figure} /images/tutorial003.png
+:align: center
+:alt: Distribution in submodules
+:::</p>
+</section>
+<section id="mean-squared-displacement">
+<h2>Mean Squared Displacement<a class="headerlink" href="#mean-squared-displacement" title="Permalink to this headline"></a></h2>
+<p>The Mean Square Displacement (MSD) is a typical indicator to classify processes
+away from normal diffusion. The MSD of a normal diffusive trajectory arises as
+a linear function of time. To estimate the MSD of a list of
+<code class="xref py py-class docutils literal notranslate"><span class="pre">Trajectory</span></code> objects, you can use:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">yupi.stats</span> <span class="kn">import</span> <span class="n">msd</span>
+<span class="kn">from</span> <span class="nn">yupi.graphics</span> <span class="kn">import</span> <span class="n">plot_msd</span>
+
+<span class="n">msd</span><span class="p">,</span> <span class="n">msd_std</span> <span class="o">=</span> <span class="n">msd</span><span class="p">(</span><span class="n">trajs</span><span class="p">,</span> <span class="n">time_avg</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">lag</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+<span class="n">plot_msd</span><span class="p">(</span><span class="n">msd</span><span class="p">,</span> <span class="n">msd_std</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">lag</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>:::{figure} /images/tutorial004.png
+:align: center
+:alt: Distribution in submodules
+:::</p>
+</section>
+<section id="kurtosis">
+<h2>Kurtosis<a class="headerlink" href="#kurtosis" title="Permalink to this headline"></a></h2>
+<p>Another useful quantity is the kurtosis, $kappa$, a measure of the disparity of
+spatial scales of a dispersal process and also an intuitive means to understand
+normality. It can be estimated using:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">yupi.stats</span> <span class="kn">import</span> <span class="n">kurtosis</span><span class="p">,</span> <span class="n">kurtosis_reference</span>
+<span class="kn">from</span> <span class="nn">yupi.graphics</span> <span class="kn">import</span> <span class="n">plot_kurtosis</span>
+
+<span class="n">ref</span> <span class="o">=</span> <span class="n">yupi</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">kurtosis_reference</span><span class="p">(</span><span class="n">trajs</span><span class="p">)</span>
+<span class="n">kurtosis</span> <span class="o">=</span> <span class="n">yupi</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">kurtosis</span><span class="p">(</span><span class="n">trajs</span><span class="p">,</span> <span class="n">time_avg</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">lag</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+<span class="n">yupi</span><span class="o">.</span><span class="n">graphics</span><span class="o">.</span><span class="n">plot_kurtosis</span><span class="p">(</span><span class="n">kurtosis</span><span class="p">,</span> <span class="n">kurtosis_ref</span><span class="o">=</span><span class="n">ref</span><span class="p">,</span> <span class="n">dt</span><span class="o">=</span><span class="n">dt</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>:::{figure} /images/tutorial005.png
+:align: center
+:alt: Distribution in submodules
+:::</p>
+</section>
+<section id="velocity-autocorrelation-function">
+<h2>Velocity Autocorrelation Function<a class="headerlink" href="#velocity-autocorrelation-function" title="Permalink to this headline"></a></h2>
+<p>The Velocity Autocorrelation Function (VACF) gives valuable information about
+the influence of correlations during a whole trajectory. To compute it and plot
+the results, you can use:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">yupi.stats</span> <span class="kn">import</span> <span class="n">vacf</span>
+<span class="kn">from</span> <span class="nn">yupi.graphics</span> <span class="kn">import</span> <span class="n">plot_vacf</span>
+
+<span class="n">vacf</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">vacf</span><span class="p">(</span><span class="n">trajs</span><span class="p">,</span> <span class="n">time_avg</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">lag</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">plot_vacf</span><span class="p">(</span><span class="n">vacf</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>:::{figure} /images/tutorial006.png
+:align: center
+:alt: Distribution in submodules
+:::</p>
+</section>
+<section id="power-spectral-density">
+<h2>Power Spectral Density<a class="headerlink" href="#power-spectral-density" title="Permalink to this headline"></a></h2>
+<p>The Power Spectral Density, or Power Spectrum, indicates the frequency content
+of the trajectory. The inspection of the PSD from a collection of trajectories
+enables the characterization of the motion in terms of the frequency components.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">yupi.stats</span> <span class="kn">import</span> <span class="n">psd</span>
+<span class="kn">from</span> <span class="nn">yupi.graphics</span> <span class="kn">import</span> <span class="n">plot_psd</span>
+
+<span class="n">psd_mean</span><span class="p">,</span> <span class="n">psd_std</span><span class="p">,</span> <span class="n">omega</span> <span class="o">=</span> <span class="n">psd</span><span class="p">(</span><span class="n">trajs</span><span class="p">,</span> <span class="n">lag</span><span class="o">=</span><span class="mi">150</span><span class="p">,</span> <span class="n">omega</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plot_psd</span><span class="p">(</span><span class="n">psd_mean</span><span class="p">,</span> <span class="n">omega</span><span class="p">,</span> <span class="n">psd_std</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>:::{figure} /images/tutorial009.png
+:align: center
+:alt: PSD IMAGE
+:::</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Jonathan Kossick.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

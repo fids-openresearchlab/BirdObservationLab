@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Getting Trajectory objects from videos &mdash; birdwatchpy 0.3 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> birdwatchpy
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../GS/About.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GS/Installation.html">Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GS/Installation.html#installation-and-compatibility">Installation and compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GS/Setup.html">Setup configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GS/Support.html">Getting Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GS/Contributing.html">Contributing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="export_sequence_folder.html">Export Sequence to Folder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="export_mot.html">Export Sequences in MOT Challange format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="convert_to_scalabel_format.html">Load Data into Scalable</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/sequence_data.html">Sequence Data Objects</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">birdwatchpy</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Getting Trajectory objects from videos</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/tutorials/tracking.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="getting-trajectory-objects-from-videos">
+<h1>Getting Trajectory objects from videos<a class="headerlink" href="#getting-trajectory-objects-from-videos" title="Permalink to this headline"></a></h1>
+<p>There are several methods to discern the position of an object through consecutive frames of a video.</p>
+<section id="color-matching">
+<h2>Color Matching<a class="headerlink" href="#color-matching" title="Permalink to this headline"></a></h2>
+<p>If the input is a video where the color of the object you want to track is quite different from everything else, like this one:</p>
+<center>
+<video width="400" controls>
+   <source src="../_static/demo.mp4" type="video/mp4">
+</video>
+</center><p>You can exploit this fact to capture the whole trajectory using the <code class="xref py py-class docutils literal notranslate"><span class="pre">ColorMatching</span></code> algorithm implemented in yupi:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">yupi.tracking</span> <span class="kn">import</span> <span class="n">ColorMatching</span>
+<span class="n">algorithm</span> <span class="o">=</span> <span class="n">ColorMatching</span><span class="p">((</span><span class="mi">180</span><span class="p">,</span><span class="mi">125</span><span class="p">,</span><span class="mi">35</span><span class="p">),</span> <span class="p">(</span><span class="mi">190</span><span class="p">,</span><span class="mi">135</span><span class="p">,</span><span class="mi">45</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Where the parameters passed to the <code class="xref py py-class docutils literal notranslate"><span class="pre">ColorMatching</span></code> constructor are the lower and upper bounds of the color vector in the selected color space, BGR by default.</p>
+<p>Next, we can define a Region-of-Interest (<code class="xref py py-class docutils literal notranslate"><span class="pre">ROI</span></code>), the neighborhood of pixels, around the last known position of the object, that are going to be explored in the following frame. Its size will depend on the specific video and the desired tracking object.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">yupi.tracking</span> <span class="kn">import</span> <span class="n">ROI</span>
+<span class="n">roi</span> <span class="o">=</span> <span class="n">ROI</span><span class="p">((</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Now, we can create an <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectTracker</span></code>. Its function is to apply the selected algorithm along the <code class="xref py py-class docutils literal notranslate"><span class="pre">ROI</span></code> in a frame to estimate the following position of the object.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">yupi.tracking</span> <span class="kn">import</span> <span class="n">ObjectTracker</span>
+<span class="n">blue_ball</span> <span class="o">=</span> <span class="n">ObjectTracker</span><span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">algorithm</span><span class="p">,</span> <span class="n">roi</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Finally, the tracker is passed to the <code class="xref py py-class docutils literal notranslate"><span class="pre">TrackingScenario</span></code>, the one in charge of iterating the video and making the trackers update its value on each frame. It also allows several trackers to coexist while processing the same video.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">yupi.tracking</span> <span class="kn">import</span> <span class="n">TrackingScenario</span>
+<span class="n">scenario</span> <span class="o">=</span> <span class="n">TrackingScenario</span><span class="p">([</span><span class="n">blue_ball</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>The track method of a <code class="xref py py-class docutils literal notranslate"><span class="pre">TrackingScenario</span></code> object, will produce a list of all the <code class="xref py py-class docutils literal notranslate"><span class="pre">Trajectory</span></code> objects the <code class="xref py py-class docutils literal notranslate"><span class="pre">TrackingScenario</span></code> tracked among all the frames of the video:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">retval</span><span class="p">,</span> <span class="n">tl</span> <span class="o">=</span> <span class="n">scenario</span><span class="o">.</span><span class="n">track</span><span class="p">(</span><span class="s1">&#39;resources/videos/demo.avi&#39;</span><span class="p">,</span> <span class="n">pix_per_m</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In this case, the list <code class="docutils literal notranslate"><span class="pre">tl</span></code> will contain only one object describing the trajectory of the blue ball in the video.</p>
+</section>
+<section id="other-tracking-algorithms">
+<h2>Other Tracking Algorithms<a class="headerlink" href="#other-tracking-algorithms" title="Permalink to this headline"></a></h2>
+<p>There are several other algorithms available in yupi (see <span class="xref std std-doc">../api_reference/tracking/algorithms</span> section on the <span class="xref std std-doc">../api_reference/api_reference</span>). For a quick overview, we recommend you to inspect <span class="xref std std-ref">Example 2</span> that contains a detailed comparison of them while developing a specific task.</p>
+</section>
+<section id="tracking-objects-when-the-camera-is-moving">
+<h2>Tracking objects when the camera is moving<a class="headerlink" href="#tracking-objects-when-the-camera-is-moving" title="Permalink to this headline"></a></h2>
+<p>Yupi is able to estimate the motion of the camera (under certain circumstances) and integrate this information while reconstructing the trajectory of the tracked object. <span class="xref std std-ref">Example 5</span> shows a typical application of this feature.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Jonathan Kossick.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
