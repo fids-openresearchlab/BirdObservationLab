@@ -24,7 +24,7 @@ classifiers = [
     "Intended Audience :: Science/Research",
     "Topic :: Scientific/Engineering :: Bio-Informatics",
 ]
-packages = [{include = "birdwatchpy"}]
+packages = [{include = "src/birdwatchpy"}]
 
 [tool.poetry.dependencies]
 python = ">=3.9, <=3.10"
@@ -74,7 +74,7 @@ poetry = "infer_pyproject.cli:main"
 
 [tool.black]
 line-length = 88
-target_version = ['py36']
+target_version = ['py39']
 include = '\.pyi?$'
 exclude = '''
 
