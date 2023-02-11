@@ -1,7 +1,7 @@
 # Setup configuration
 BirdObservationLab is configured using the config.ini file. 
 
-```
+```ini
 [general]
 local_data_path = /path/to/local_data
 fps = 29.97
