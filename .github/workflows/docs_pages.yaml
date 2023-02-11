@@ -18,14 +18,14 @@ jobs:
       #run: poetry install -E amazon -E docs
     - name: Build documentation
       run: |
-        mkdir gh-pages
-        touch gh-pages/.nojekyll
+        mkdir docs
+        touch docs/.nojekyll
         cd docs/source
         poetry run sphinx-build -b html . _build
-        cp -r _build/* ../../gh-pages/
+        cp -r _build/* ../../docs/
     - name: Deploy documentation
       if: ${{ github.event_name == 'push' }}
       uses: JamesIves/github-pages-deploy-action@v4.4.1
       with:
         branch: gh-pages
-        folder: gh-pages
+        folder: docs
