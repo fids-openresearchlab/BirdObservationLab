@@ -13,7 +13,7 @@
   <p align="center">
     A flying bird observation system
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <a href="https://fids-openresearchlab.github.io/BirdObservationLab/"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <!---
@@ -40,16 +40,11 @@ BirdObservationLab allows to detect and track flying birds in zenith faced high 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
 ### Installation
-
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/fidsopenresearchlab/BirdObservationLab.git
+   git clone https://github.com/fids-openresearchlab/BirdObservationLab.git
    ```
 2. Install dependencies using poetry:
     ```shell
@@ -65,7 +60,7 @@ Important: Make sure your OpenCV Version can use CUDA functionality.
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Please check out our [Documentation](https://example.com) in order to properly configurating and using this project.
+Please check out our [Documentation]("https://fids-openresearchlab.github.io/BirdObservationLab/) in order to properly configurating and using this project.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
